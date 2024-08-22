@@ -5,7 +5,7 @@ require('cross-fetch/polyfill');
 
 
 
-//added planetary data json format and moved to top
+//added planetary data json format and moved to top of .js
 async function myFetch() {
     const response = await fetch('https://handlers.education.launchcode.org/static/planets.json');
     return response.json();
@@ -15,7 +15,7 @@ async function myFetch() {
 function pickPlanet(planets) {
     //planets param is list of planets
     const index = Math.floor(Math.random() * planets.length);
-    return planets[index];
+    return planets[index]; //index pulling random from planets
 }
 
 //based on parameters, unhide html formatting, added ${} to list items, declared missionTargetDiv for missionTarget Div item on index div id, set to htmlcontent after html formatting 
@@ -80,15 +80,15 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     document.getElementById("copilotStatus").innerHTML = `Co-pilot ${copilot} is ready for launch`;
     document.getElementById("fuelStatus").innerHTML = `Fuel level high enough for launch`;
     document.getElementById("cargoStatus").innerHTML = `Cargo mass low enough for launch`;
-    if (fuelLevel < 10000 || cargoLevel > 10000) {
+    if (fuelLevel < 10000 || cargoLevel > 10000) { //fuel level below 10k or cargolevel is above 10k, shuttle not ready
         document.getElementById("faultyItems").style.visibility = "visible";
         document.getElementById("launchStatus").innerHTML =`Shuttle Not Ready for Launch`;
         document.getElementById("launchStatus").style.color = "red";
-        if (fuelLevel < 10000) {
+        if (fuelLevel < 10000) { //further validating fuel
             document.getElementById("fuelStatus").innerHTML = `Fuel level too low for launch`;
             document.getElementById("fuelStatus").style.color = "red";
         }
-        if (cargoLevel > 10000) {
+        if (cargoLevel > 10000) { //further validating cargo status
             document.getElementById("cargoStatus").innerHTML = `Cargo mass too heavy for launch`;
             document.getElementById("cargoStatus").style.color = "red";
             

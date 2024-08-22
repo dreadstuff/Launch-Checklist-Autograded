@@ -3,28 +3,28 @@
 //const { myFetch, pickPlanet, addDestinationInfo, formSubmission } = require("./scriptHelper");
 
 window.addEventListener("load", function() {
-    const form = this.document.querySelector("form");
-    let listedPlanets;
+    //const form = this.document.querySelector("form");
+    let listedPlanets; //x
     // Set listedPlanetsResponse equal to the value returned by calling myFetch()
     let listedPlanetsResponse = myFetch();
 
-    listedPlanetsResponse.then(function (result) {
+    listedPlanetsResponse.then(function (result) { //x
         //fetch result is a json containing array of planet objects
-        listedPlanets = result;
-        console.log(listedPlanets);
+        listedPlanets = result; //x
+        console.log(listedPlanets); //prints log to console
     }).then(function () {
-        let chosenPlanet = pickPlanet(listedPlanets);
+        //let chosenPlanet = pickPlanet(listedPlanets);
         console.log(listedPlanets);
 
-        let planet = pickPlanet(listedPlanets);
-        let name = planet.name;
-        let diameter = planet.diameter;
-        let star = planet.star;
-        let distance = planet.distance;
-        let moons = planet.moons;
-        let imageUrl = planet.image;
+        // let planet = pickPlanet(listedPlanets);
+        // let name = planet.name;
+        // let diameter = planet.diameter;
+        // let star = planet.star;
+        // let distance = planet.distance;
+        // let moons = planet.moons;
+        // let imageUrl = planet.image;
         
-        addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl);
+        // addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl);
     })
 
         // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
