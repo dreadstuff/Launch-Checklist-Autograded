@@ -44,12 +44,12 @@ window.addEventListener("load", function() {
         //     formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
         //     event.preventDefault();
 
-        document.getElementById("formSubmit").addEventListener("click", function(event) {
-            event.preventDefault();
-            const pilot = document.getElementById("pilotName").value;
-            const copilot = document.getElementsByName("copilotName")[0].value;
-            const fuelLevel = document.getElementsByName("fuelLevel")[0].value;
-            const cargoLevel = document.getElementsByName("cargoMass")[0].value;
-            formSubmission(document, listedPlanets, pilot, copilot, fuelLevel, cargoLevel);
-    });
+    //     document.getElementById("formSubmit").addEventListener("click", function(event) {
+    //         event.preventDefault();
+    //         const pilot = document.getElementById("pilotName").value;
+    //         const copilot = document.getElementsByName("copilotName")[0].value;
+    //         const fuelLevel = document.getElementsByName("fuelLevel")[0].value;
+    //         const cargoLevel = document.getElementsByName("cargoMass")[0].value;
+    //         formSubmission(document, listedPlanets, pilot, copilot, fuelLevel, cargoLevel);
+    // });
 })
