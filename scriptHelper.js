@@ -1,4 +1,4 @@
-// Write your helper functions here!
+    // Write your helper functions here!
 
 require('cross-fetch/polyfill');
  
@@ -35,6 +35,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     missionTargetDiv.innerHTML = htmlContent;
  }
  
+
  function validateInput(value) {
     if (value === "") {
      return "Empty"; //taking in string as parameter, return Empty (if empty)
@@ -56,6 +57,10 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let copilotStatus = validateInput(copilot);
     let fuelStatus = validateInput(fuelLevel);
     let cargoStatus = validateInput(cargoLevel);
+
+    //accidentally deleted for list parameter - re-adding here
+    document.getElementById("faultyItems").style.visibility = 'visible';
+    list.style.visibility = "visible"; //sets visibiltiy of list to "visible" 
 
      //pilotStatus = document.getElementById('pilotStatus'); 
      //copilotStatus = document.getElementById('copilotStatus');
