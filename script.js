@@ -1,6 +1,8 @@
 // Write your JavaScript code here!
 
-//const { myFetch, pickPlanet, addDestinationInfo, formSubmission } = require("./scriptHelper");
+// const { myFetch, pickPlanet, addDestinationInfo, formSubmission } = require("./scriptHelper");
+// import { myFetch, pickPlanet, addDestinationInfo, formSubmission } from "./scriptHelper"
+//this keeps breaking my code? 
 
 window.addEventListener("load", function() {
     const form = this.document.querySelector("form");
@@ -28,10 +30,6 @@ window.addEventListener("load", function() {
     })
 
 // I forgot to un-note this code during some testing :(
-
-
-
-
 
         // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
 

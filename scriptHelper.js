@@ -1,10 +1,7 @@
     // Write your helper functions here!
 
-require('cross-fetch/polyfill');
+// require('cross-fetch/polyfill');
  
-
-
-
 //added planetary data json format and moved to top of .js
 async function myFetch() {
     const response = await fetch('https://handlers.education.launchcode.org/static/planets.json');
@@ -67,6 +64,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
      //fuelStatus = document.getElementById('fuelStatus');
      //cargoStatus = document.getElementById('cargoStatus');
 
+     //input validation - empty fields and invalid data types (pop up alert)
     if (pilotStatus === "Empty" || copilotStatus === "Empty" || fuelStatus === "Empty" || cargoStatus === "Empty"){
         alert("All fields are required");
         return;
@@ -76,6 +74,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         return;
     }
 
+    //input return for successful validation 
     document.getElementById("launchStatus").innerHTML = `Shuttle is Ready for Launch`;
     document.getElementById("launchStatus").style.color = "green";
     document.getElementById("fuelStatus").style.color ="green";
